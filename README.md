@@ -1,24 +1,15 @@
-# README
+# Rails Launchpad
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A great and only somewhat-opinionated starting place. Adds the following to a standard Rails install:
 
-Things you may want to cover:
+- Postgres
+- Bootstrap 4
+- Clearance
 
-* Ruby version
+And some other helper gems, like:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Faker
+- Factory Bot
+- Groupdate
+- Kaminari
+- Font Awesome
