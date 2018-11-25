@@ -5,7 +5,20 @@
   <li class="nav-item">
     <a class="nav-link" href="/users">Users</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/users/new">Sign Up</a>
+  <% if signed_in? %>
+    <li class="nav-item">
+      <%= link_to 'Sign Out', sign_out_path, method: :delete, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      Signed in as: <%= current_user.email %>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to 'Sign In', sign_in_path, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sign_up">Sign Up</a>
+    </li>
+  <% end %>
   </li>
 </ul>

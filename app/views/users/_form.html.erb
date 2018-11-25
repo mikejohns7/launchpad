@@ -1,32 +1,19 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="form-group text-field">
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name, type: 'first name', class: 'form-control' %>
+</div>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="form-group text-field">
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name, type: 'last name', class: 'form-control' %>
+</div>
 
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: 'form-control' %>
-  </div>
+<div class="form-group text-field">
+  <%= form.label :email %>
+  <%= form.text_field :email, type: 'email', class: 'form-control' %>
+</div>
 
-  <div class="form-group">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.submit class: 'btn btn-success' %>
-  </div>
-<% end %>
+<div class="form-group password-field">
+  <%= form.label :password %>
+  <%= form.password_field :password, class: 'form-control' %>
+</div>
