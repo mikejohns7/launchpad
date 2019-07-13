@@ -48,7 +48,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 
 # Bootstrap framework
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 
 # Group Activerecord results with date helpers
 gem 'groupdate'
