@@ -8,3 +8,8 @@ html, body {
 .nav-text {
   padding: 8px 16px;
 }
+
+.notification-well {
+  position: relative;
+  z-index: 100;
+}
