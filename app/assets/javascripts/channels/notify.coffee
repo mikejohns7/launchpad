@@ -10,4 +10,5 @@ App.notify = App.cable.subscriptions.create "NotifyChannel",
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
     console.log 'received'
-    alert data.content
+    $('.notification-well').append data.notification
+    $("##{data.toast_id}").toast('show')
