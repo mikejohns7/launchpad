@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notifications/send_global'
+  get 'notifications/send_direct'
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
 
@@ -13,5 +15,9 @@ Rails.application.routes.draw do
   get "/sign_up" => "users#new", as: "sign_up"
   resources :users
 
+  post '/notifications/test', to: 'notifications#send_global', as: 'global_notification'
+
   root 'static_pages#index'
+
+  mount ActionCable.server, at: '/cable'
 end

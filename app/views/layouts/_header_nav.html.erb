@@ -9,6 +9,9 @@
     <li class="nav-item">
       <%= link_to 'Sign Out', sign_out_path, method: :delete, class: 'nav-link' %>
     </li>
+    <li class="nav-item">
+      <%= link_to 'Test Notification', global_notification_path, method: :post, remote: true, class: 'nav-link' %>
+    </li>
     <li class="nav-item nav-text">
       Signed in as: <%= current_user.email %>
     </li>
