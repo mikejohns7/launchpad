@@ -29,6 +29,7 @@ class UsersController < Clearance::UsersController
 
     respond_to do |format|
       if @user.save
+        helpers.send_global_notification
         format.html do
           sign_in @user
           redirect_to @user, notice: 'User was successfully created.'

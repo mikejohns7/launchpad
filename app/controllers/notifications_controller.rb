@@ -1,9 +1,6 @@
 class NotificationsController < ApplicationController
   def send_global
-    n_id = generate_random_id
-    ActionCable.server.broadcast 'global_channel',
-      toast_id: n_id,
-      notification: render_notification(Faker::TvShows::Simpsons.quote, n_id)
+    helpers.send_global_notification
   end
 
   def send_direct
